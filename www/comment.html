@@ -19,7 +19,7 @@
 <ion-content padding>
 
 <body>
-  <h3>Suggestion</h3> <input type="radio" name="gender" value="suggestion">
+  <h3>Comment </h3> <input type="radio" name="gender" value="suggestion">
   <img src="https://cdn.shopify.com/s/files/1/0185/5092/products/persons-0108_large.png?v=1369543778">
 
 
@@ -29,28 +29,38 @@
   <form>
     <div class="form-group">
       <label for="comment"></label>
-      <textarea class="form-control" rows="3" id="comment"></textarea>
-
-      <h4>General Manager</h4><input type="checkbox" name="thumbsup"sss value="complain" color="">
-       
-    </div>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
   </form>
 </div>
-  
 
- <!-- <h3>Complain</h3><input type="radio" name="thumbsup" value="complain">
-  <img src="https://ponlepilasalmando.files.wordpress.com/2015/03/persons-0107_large.png"> 
-    <div class="container">
-  <form>
-    <div class="form-group">
-      <label for="comment"></label>
-      <textarea class="form-control" rows="3" id="comment"></textarea>
-    </div>
-  </form>
-</div> -->
- <a class="button" href="map.html" font-size="20px" font-style="bold" >Enter</a>
+  <h4>Where to?</h4>
+
+       <div class="select">
+  <option class="select" border-raduis="16px"></option>
+  </div class="select">
+    <select class="dropbtn" name="Province"
+              class="select-large">
+    <option value="0">Select Here</option>
+
+    <option>Store Manager</option>
+    <option>Operational Manager</option>
+    <option>Regional Manager</option>
+    <option>General Admin</option>
+    <option>Central buying and plaininh supervisor</option>
+   </select>
+  </option>
+</div>
+
+<br>
+
+      <!-- <h6>Store Manager</h6><input type="checkbox" name="thumbsup" value="complain">
+        <h6>Area Manager</h6><input type="checkbox" name="thumbsup"sss value="complain">
+        <h6>Regional Manager</h6><input type="checkbox" name="thumbsup" value="complain">
+        <h6>Central Operations</h6><input type="checkbox" name="thumbsup" value="complain">
+   -->
+   <a class="button" href="map.html" font-size="20px" font-style="bold" >Enter</a>
  
-
 </body>
 <style>
   
@@ -59,15 +69,23 @@
     text-align: center;
     font-family: sans-serif;
     font-size: 30px;
-    color: black;
+    color: white;
 
   }
-  h2 {
+  h4 {
     text-align: center;
     font-family: sans-serif;
-    color: black;
+    color: white;
     font-size: 20px;
   }
+
+  h6{
+    text-align: center;
+    font-family: sans-serif bold;
+    color: white;
+    
+  }
+
   body {
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmt7rgH81cqzpQ2igkA_pavy1KV5pGh5jcw_IYjtTloWRq9Ty3");
     text-align: center;
@@ -79,6 +97,19 @@
     height: 50px;
     border-radius: 20px;
   }
+
+  .input{
+    text-align: left;
+    margin-left: 60px;
+  }
+
+  .textarea{
+      height: 60px;
+      width: 20px;
+      border-radius: 20px;
+
+  }
+
   .buttons{
         width: 100%;
         text-align: center;
