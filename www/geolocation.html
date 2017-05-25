@@ -1,112 +1,104 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <button onclick="getLocation()">Try It</button>
-
-<div id="mapholder"></div>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
-    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-}
-//To use this code on your website, get a free API key from Google.
-//Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
-
-function showError(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
-            break;
-        case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
-            break;
-        case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
-            break;
-        case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
-            break;
-    }
-}
-</script>
-
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        infoWindow = new google.maps.InfoWindow;
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJXX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap">
-    </script>
-  </body>
-</html>
+<div class="container">
+        <div class="container-inner cf">
+          <h2 class="headline--main t-uppercase">
+  Find a <em>Store</em>
+          </h2>
+          <!-- ==========================================
+             ::Sidebar
+             ========================================== -->
+          <aside class="sidebar">
+<!-- The following are required for the NativeOS JS library -->
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/trimpath/template.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/jstween/Tween.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/cambrient/main.js?v=20"></script>
+ <!-- Native javascript library for use by NativeOS -->
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/ccs/main.js?v=20"></script>
+ <!-- Native configuration of NativeOS library -->
+<!-- Load all of these...was previsouly loaded by main.js...but moved here so that it can be compressed and concatenated-->
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/cambrient/util.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/cambrient/ajax.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/cambrient/user_messaging.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/cambrient/session_manager.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/shared/client_scripts/cambrient/client_data/main.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/shared/content/user/js/user.js?v=20"></script>
+         <script type="text/javascript" src="/foschinigrp/modletInclude/web_store_search/js/store_search.js?v=20"></script>
+ <!-- Modlet javascript code -->
+  <!-- ==========================================
+    Error Messages
+    ========================================== -->
+  <div class="js-store__error-list
+              error-list
+              error-list--store">
+    <!-- <div class="store__error-list__header
+                error-list__header
+                error-list__header--store
+                p-relative">
+      <i class="sprite bg sprites-alert-2"></i>
+      The following errors occurred  // mantis: 0082930
+    </div> -->
+    <div class="cf">
+    </div>
+    <ul id="js-error_message_store"
+     class="error__listing">
+    </ul>
+  </div>
+  <aside class="sidebar">
+    <section class="sidebar-widget widget--find-store">
+      <header class="sidebar-widget__header">
+        <i class="sprite sprites-search-store v-middle right-nudge"></i>
+        Search for stores
+      </header>
+        <div class="row row--alt t-center">
+          <form class="select--border"
+           id="store_form"
+           action="?"
+           method="POST">
+            <input type="hidden"
+             name="form_search"
+             value="true"/>
+            <div class="row t-center select-large">
+              <select name="brand"
+               class="select-large">
+                <option value="-1">
+                  All Brands
+                </option>
+                <option value="27" selected >@home</option>
+                <option value="105"  >@home livingspace</option>
+                <option value="62"  >American Swiss</option>
+                <option value="67"  >Charles and Keith</option>
+                <option value="102"  >Colette</option>
+                <option value="43"  >Donna</option>
+                <option value="44"  >Duesouth</option>
+                <option value="45"  >Exact</option>
+                <option value="66"  >Fabiani</option>
+                <option value="29"  >Foschini</option>
+                <option value="63"  >G-Star Raw</option>
+                <option value="71"  >Hi</option>
+                <option value="28"  >Markham</option>
+                <option value="64"  >Mat and May</option>
+                <option value="104"  >Next</option>
+                <option value="100"  >Soda Bloc</option>
+                <option value="49"  >Sportscene</option>
+                <option value="50"  >Sterns</option>
+                <option value="103"  >The Fix</option>
+                <option value="51"  >Totalsports</option>
+              </select>
+            </div>
+            <input type="text"
+             class="field field--alt field--border field--large"
+             placeholder="City, suburb or shopping mall"
+             name="keyword"
+             value="" />
+            <div class="row">
+              <input type="button"
+               class="btn
+                      btn--light
+                      btn--box-shadow
+                      btn--bold"
+               value="Find a Store"
+               onclick="tfg.modlets.storeSearch.findStores();"/>
+            </div>
+          </form>
+        </div> <!-- row -->
+    </section> <!-- .sidebar-widget -->
+  </aside>
