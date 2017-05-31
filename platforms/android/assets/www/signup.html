@@ -1,0 +1,160 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <h3>Staff Shoppers App</h3> 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<body>
+
+<div class="cont">
+  <div class="form">
+    <form action="required">
+      <h1>Sign Up</h1>
+      <input type="text"
+             class="name"
+             placeholder="Fist Name" required="text"/>
+       <input type="text"
+             class="last"
+             placeholder="Last Name." required="text"/>
+      <input type="text"
+             class="user"
+             placeholder="Employee number" required="text" />
+      <input type="text"
+             class="email"
+             placeholder="Email Address"/>
+      <input type="password" 
+             class="pass"
+             placeholder="Password"/>
+
+      <a class="button" href="login.html" font-size="20px" font-style="bold" >Create your account</a>
+ 
+    </form>
+  </div>
+</div>
+    
+<!-- <div class="button" style="display: block; margin: auto; padding: 20px 50px; border-radius: 20px; background-image: -webkit-gradient(linear,left top, left bottom, from(#400040)"><a href="login.html"> -->
+
+</body>
+
+
+  <style >
+  body {
+      /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmt7rgH81cqzpQ2igkA_pavy1KV5pGh5jcw_IYjtTloWRq9Ty3");*/
+      background-color: #9672CF;
+      background-size: cover;
+      text-align: center;
+}
+    
+    @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+ *{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+.cont{
+  position: relative;
+  width: 30px;
+  height: 410px;
+  padding: 10px 25px;
+  margin: 10vh auto;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.form{ width: 100%; height: 100%; }
+
+h3, h2, .name, .last, .user, .email, .pass{ 
+  text-align: center;
+  font-weight: bolder;
+  display: block;
+}
+
+h3{ 
+    color: black;
+    text-align: center;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 5px;
+}
+h1 {
+    text-align: center;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.name, .last, .user, .email, .pass, .login{
+  background: #ecf0f1;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.login:hover{ background: gray; }
+
+@media only screen and (min-width : 280px) {
+  .cont{ width: 90% }
+}
+
+@media only screen and (min-width : 480px) {
+  .cont{ width: 60% }
+}
+
+@media only screen and (min-width : 768px) {
+  .cont{ width: 40% }
+}
+
+@media only screen and (min-width : 992px) {
+  .cont{ width: 30% }
+}
+
+h2{ color: #fff; margin-top: 25px; }
+.buttons{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+        
+      }
+
+      .button{
+        display: inline-block;
+        width :200px;
+        height: 50px;
+        padding-top: 5px;
+        background: #9B59B6;
+        color: white;
+        font-size: 1.2em;
+        text-decoration :none;
+        text-align: center;
+        line-height: 50px;
+        margin: 40px 5px 0;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 12px 20px -10px rgba(0,0,0,0.65);
+        -moz-box-shadow: 0px 12px 20px -10px rgba(0,0,0,0.65);
+        box-shadow: 0px 12px 20px -10px rgba(0,0,0,0.65);
+        transition: box-shadow 0.5s
+      }
+
+.button:hover{ background: gray; }
+  </style>
+
+</ion-content>

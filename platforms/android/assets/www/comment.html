@@ -1,0 +1,154 @@
+<ion-header>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <ion-navbar>
+    <ion-title>
+      <h1>Staff Shoppers App</h1> 
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+  
+
+<ion-content padding>
+
+<body>
+  <h3> Compliments / Complains </h3> 
+  <input type="radio" name="gender" value="suggestion">
+  <img src="https://cdn.shopify.com/s/files/1/0185/5092/products/persons-0108_large.png?v=1369543778">
+
+
+  <input type="radio" name="thumbsup" value="complain">
+  <img src="https://ponlepilasalmando.files.wordpress.com/2015/03/persons-0107_large.png">
+  <div class="container">
+  <form>
+    <div class="form-group">
+      <label for="comment"></label>
+    <textarea class="form-control" rows="3" id="comment"></textarea>
+
+        </div>
+    </form>
+  </div>
+
+
+  <h4>Where to?</h4>
+
+       <div class="select">
+  <option class="select" border-raduis="16px"></option>
+  </div class="select">
+    <select class="dropbtn" name="Province"
+              class="select-large">
+    <option value="0">Select Here</option>
+
+    <option>Store Manager</option>
+    <option>Operational Manager</option>
+    <option>Regional Manager</option>
+    <option>General Admin</option>
+    <option>Central buying and plaining supervisor</option>
+   </select>
+  </option>
+</div>
+
+<br>
+
+   <h4><a class="button" href="map.html">Next</a></h4>
+ 
+</body>
+<style>
+  
+  h1 {
+
+    text-align: center;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 30px;
+    color: black;
+
+  }
+  h4 {
+    color: black;
+      text-align: center;
+      font-family: cursive;
+      font-style: italic;
+      font-weight: bolder;
+  }
+
+  h3{
+    text-align: center;
+      font-family: cursive;
+      font-style: italic;
+      font-weight: bolder;
+    color: white;
+    
+  }
+
+  body {
+    /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmt7rgH81cqzpQ2igkA_pavy1KV5pGh5jcw_IYjtTloWRq9Ty3");*/
+    background-color: #9672CF;
+    text-align: center;
+    background-size: cover;
+  }
+  img {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+  }
+
+  .input{
+    text-align: left;
+    margin-left: 60px;
+  }
+
+  .textarea{
+      height: 60px;
+      width: 20px;
+      border-radius: 20px;
+
+  }
+
+  .buttons{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: bolder;
+        font-family: cursive;
+        font-size: 20px;
+        
+      }
+
+      .button{
+        display: inline-block;
+        width :140px;
+        height: 50px;
+        padding-top: 5px;
+        background: #9B59B6;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.2em;
+        text-decoration :none;
+        text-align: center;
+        line-height: 50px;
+        margin: 40px 5px 0;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 12px 20px -10px rgba(0,0,0,0.65);
+        -moz-box-shadow: 0px 12px 20px -10px rgba(0,0,0,0.65);
+        box-shadow: 0px 12px 20px -10px rgba(0,0,0,0.65);
+        transition: box-shadow 0.5s
+      }
+
+.button:hover { background: gray; }
+
+.button:hover a{ background: gray; }
+
+</style>
+</ion-content>
